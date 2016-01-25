@@ -1,0 +1,9 @@
+# Site settings
+title: "Theme Repo Tools: main.json"
+email: no-reply@themerepo.org
+description: "main.json Generator"
+url: "http://main.json.themerepo.github.io"
+# Build settings
+markdown: kramdown
+sass:
+    style: compressed
