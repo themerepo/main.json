@@ -2,5 +2,20 @@
 layout: default
 ---
 <div ng-controller="ThemeRepoToolMainJSONMain">
-
+    <p>
+        <input type="text" ng-model="theme.name" ng-clean-input="true" placeholder="Theme Name">
+    </p>
+    <p>
+        <textarea ng-model="theme.description" ng-clean-input="true" placeholder="Theme Description" ng-auto-expand="true"></textarea>
+    </p>
+    <p>
+        <input type="text" ng-model="theme.tags" ng-clean-input="true" placeholder="Tags (Comma Separated, Max 10)" ng-list>
+    </p>
+    <p>
+        <input type="text" ng-focus="dump()" ng-model="theme.preview" ng-clean-input="true" placeholder="Theme Preview Image URL">
+    </p>
+    <div class="code">[[theme | prettify]]</div>
+    <p ng-show="theme.name && theme.description">
+        Copy & Paste The Above Code When Creating A main.json File
+    </p>
 </div>

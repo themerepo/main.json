@@ -1,15 +1,25 @@
 ---
 ---
 $black-color: #444;
+$grey-color: #eef2f3;
+
 @mixin font {
     font-family: helvetica;
     font-weight: lighter;
 }
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 body {
     margin: 0px;
     color: $black-color;
     @include font;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,4 +29,32 @@ h1, h2, h3, h4, h5, h6 {
 #wrap {
     width: 600px;
     margin: auto;
+}
+
+input, textarea {
+    box-sizing: border-box;
+    padding: 10px;
+    @include border-radius(3px);
+    border: 1px solid #FAF;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    width: 100%;
+    resize: none;
+    outline-color: #93F9B9;
+}
+
+textarea {
+    height: 60px;
+}
+
+.code {
+    white-space: pre;
+    background: $grey-color;
+    @include border-radius(3px);
+    padding: 5px;
+    font-family: monospace;
+    font-size: 12px;
+    margin: 10px 0px;
+    word-wrap: break-word;
 }
